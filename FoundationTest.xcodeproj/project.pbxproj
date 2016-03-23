@@ -15,6 +15,7 @@
 		0F6F1C411CA27EC40047FB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F1C3F1CA27EC40047FB89 /* LaunchScreen.storyboard */; };
 		0F6F1C4C1CA27EC40047FB89 /* FoundationTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F1C4B1CA27EC40047FB89 /* FoundationTestTests.m */; };
 		0F6F1C571CA27EC40047FB89 /* FoundationTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F1C561CA27EC40047FB89 /* FoundationTestUITests.m */; };
+		0F6F1C661CA27EF20047FB89 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F1C651CA27EF20047FB89 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		0F6F1C521CA27EC40047FB89 /* FoundationTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6F1C561CA27EC40047FB89 /* FoundationTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationTestUITests.m; sourceTree = "<group>"; };
 		0F6F1C581CA27EC40047FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F6F1C641CA27EF20047FB89 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0F6F1C651CA27EF20047FB89 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				0F6F1C3F1CA27EC40047FB89 /* LaunchScreen.storyboard */,
 				0F6F1C421CA27EC40047FB89 /* Info.plist */,
 				0F6F1C311CA27EC40047FB89 /* Supporting Files */,
+				0F6F1C641CA27EF20047FB89 /* Person.h */,
+				0F6F1C651CA27EF20047FB89 /* Person.m */,
 			);
 			path = FoundationTest;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			files = (
 				0F6F1C391CA27EC40047FB89 /* ViewController.m in Sources */,
 				0F6F1C361CA27EC40047FB89 /* AppDelegate.m in Sources */,
+				0F6F1C661CA27EF20047FB89 /* Person.m in Sources */,
 				0F6F1C331CA27EC40047FB89 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -403,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoundationTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sss.FoundationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoundationTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sss.FoundationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
