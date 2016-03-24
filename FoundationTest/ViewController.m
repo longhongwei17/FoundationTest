@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Person.h"
 #import "People.h"
+#import "Bird.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -27,11 +28,20 @@ void sayFunction(id self ,SEL _cmd ,id some)
 {
     [super viewDidLoad];
     
+    // kvc 测试
     [self kvcTest];
     
+    // 动态生成类
     [self dynamicClassTest];
     
+    //动态获取属性
     [self calculatePropertyAndIvar];
+    
+    // 数据转模型
+    [self dictionaryToModel];
+    
+    //消息转发
+    [self messageChange];
 
 }
 
@@ -108,7 +118,7 @@ void sayFunction(id self ,SEL _cmd ,id some)
 {
     People *cangTeacher = [[People alloc] init];
     cangTeacher.name = @"苍井空";
-    cangTeacher.age = 18;
+    cangTeacher.age = @18;
     [cangTeacher setValue:@"老师" forKey:@"occupation"];
     
     NSDictionary *propertyResultDic = [cangTeacher allProperties];
@@ -127,6 +137,37 @@ void sayFunction(id self ,SEL _cmd ,id some)
     }
 }
 
+
+/**
+ *  @brief 数据转 model 单层 并没有递归 转换
+ */
+- (void)dictionaryToModel
+{
+
+    NSDictionary *data = @{@"name":@"long",@"age":@"20",@"occupation":@"程序员",@"nationality":@"美利坚"};
+    People *p  = [[People alloc] initWithDictionary:data];
+    
+    NSLog(@"name = %@ age====%@,=%@,=%@",p.name,p.age,p.occupation,p.nationality);
+
+    NSLog(@"todictionary===%@",[p toDictionary]);
+    
+    
+    
+}
+
+- (void)messageChange
+{
+    NSDictionary *data = @{@"name":@"long",@"age":@"20",@"occupation":@"程序员",@"nationality":@"美利坚"};
+    People *p  = [[People alloc] initWithDictionary:data];
+    
+    [p sing];
+    
+    
+    Bird *b = [[Bird alloc] init];
+    b.name = @"sdf";
+    ((void(*)(id,SEL))objc_msgSend)(b,@selector(sing));
+    
+}
 
 
 - (void)didReceiveMemoryWarning

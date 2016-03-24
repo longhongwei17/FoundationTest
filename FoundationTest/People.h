@@ -11,14 +11,17 @@
 #import <objc/message.h>
 
 
-@interface People : NSObject
+@interface People : NSObject<NSCoding>
 {
-    NSString *_occupation;
-    NSString *_nationality;
+//    NSString *_occupation;
+//    NSString *_nationality;
 }
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, assign)NSUInteger age;
+@property (nonatomic, strong)NSNumber *age;
+
+@property (nonatomic, copy) NSString *occupation;
+@property (nonatomic, copy) NSString *nationality;
 
 - (NSDictionary *)allProperties;
 
@@ -26,5 +29,9 @@
 
 - (NSDictionary *)allMethods;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
 
+- (NSDictionary *)toDictionary;
+
+- (void)sing;
 @end

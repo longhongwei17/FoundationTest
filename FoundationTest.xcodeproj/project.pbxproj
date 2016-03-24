@@ -17,6 +17,7 @@
 		0F6F1C571CA27EC40047FB89 /* FoundationTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F1C561CA27EC40047FB89 /* FoundationTestUITests.m */; };
 		0F71B3ED1CA3B52700599757 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F71B3EC1CA3B52700599757 /* People.m */; };
 		0F71B3F01CA3B92100599757 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F71B3EF1CA3B92100599757 /* Person.m */; };
+		0F71B3F31CA3E03F00599757 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F71B3F21CA3E03F00599757 /* Bird.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		0F71B3EC1CA3B52700599757 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 		0F71B3EE1CA3B92100599757 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		0F71B3EF1CA3B92100599757 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0F71B3F11CA3E03F00599757 /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		0F71B3F21CA3E03F00599757 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				0F6F1C3F1CA27EC40047FB89 /* LaunchScreen.storyboard */,
 				0F6F1C421CA27EC40047FB89 /* Info.plist */,
 				0F6F1C311CA27EC40047FB89 /* Supporting Files */,
+				0F71B3F11CA3E03F00599757 /* Bird.h */,
+				0F71B3F21CA3E03F00599757 /* Bird.m */,
 			);
 			path = FoundationTest;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			files = (
 				0F6F1C391CA27EC40047FB89 /* ViewController.m in Sources */,
 				0F6F1C361CA27EC40047FB89 /* AppDelegate.m in Sources */,
+				0F71B3F31CA3E03F00599757 /* Bird.m in Sources */,
 				0F71B3F01CA3B92100599757 /* Person.m in Sources */,
 				0F71B3ED1CA3B52700599757 /* People.m in Sources */,
 				0F6F1C331CA27EC40047FB89 /* main.m in Sources */,
