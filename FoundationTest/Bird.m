@@ -29,7 +29,7 @@
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     if ([NSStringFromSelector(aSelector) isEqualToString:@"sing"]) {
-        return [NSMethodSignature signatureWithObjCTypes:"@:"];
+        return [NSMethodSignature signatureWithObjCTypes:"v:@:"];
     }
     return [super methodSignatureForSelector: aSelector];
 }
@@ -46,8 +46,8 @@
 #else
     
     [anInvocation setSelector:@selector(dance)];
+    // 这还要指定是哪个对象的方法
     [anInvocation invokeWithTarget:self];
-    
 #endif
     
 }

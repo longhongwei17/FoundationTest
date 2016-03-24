@@ -42,6 +42,8 @@ void sayFunction(id self ,SEL _cmd ,id some)
     
     //消息转发
     [self messageChange];
+    
+    [self test];
 
 }
 
@@ -161,14 +163,37 @@ void sayFunction(id self ,SEL _cmd ,id some)
     People *p  = [[People alloc] initWithDictionary:data];
     
     [p sing];
-    
-    
+
     Bird *b = [[Bird alloc] init];
     b.name = @"sdf";
     ((void(*)(id,SEL))objc_msgSend)(b,@selector(sing));
     
 }
 
+- (void)test
+{
+    
+    NSMutableArray *list = [NSMutableArray array];
+    NSMutableArray *nextList = [NSMutableArray array];
+    
+//    ((void(*)(id, SEL, id))objc_msgSend)(list,@selector(addObject:),@"dasdas");
+//    
+//    NSLog(@"list===%@",list);
+    NSDate *date = [NSDate date];
+    for (NSInteger index = 0; index < 100000; index ++) {
+        [list addObject:@(index).stringValue];
+    }
+    NSLog(@"===%@",@([date timeIntervalSinceNow]));
+    date = [NSDate date];
+    
+    for (NSInteger index = 0; index < 100000; index ++) {
+        ((void(*)(id,SEL,id))objc_msgSend)(nextList,@selector(addObject:),@(index).stringValue);
+    }
+    NSLog(@"====%@",@([date timeIntervalSinceNow]));
+    
+  
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
